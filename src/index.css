@@ -24,6 +24,67 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 80px;
+    padding: 20px 30px;
     z-index: 1000;
+}
+.logo{
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.menu-toggle{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.menu-toggle span{
+    width: 32px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100vh;
+    background: #111;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 40px;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+}
+
+.menu a{
+    margin: 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+.menu.active{
+    transform: rotateX(0);
+}
+.overflow-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    z-index: 900;
+}
+
+.overflow-menu.active{
+    opacity: 1;
+    visibility: visible;
+
 }
