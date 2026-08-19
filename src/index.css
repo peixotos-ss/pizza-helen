@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jacques francois', Arial;
+
+}
+html, body{
+    max-width: 100%;
+    overflow-x: hidden;
+
+}
+body{
+    background: #000;
+    color: #fff
+}
+.header{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #1c1c1c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    z-index: 1000;
+}
