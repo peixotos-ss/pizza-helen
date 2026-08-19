@@ -11,19 +11,21 @@ export default function Header(){
         <>
             <header className="header">
                 <h1 className="logo">Pizza Fiep</h1>
-                {/* QUando clicar, chama a função toggleMenu */}
+                {/* Quando clicar, chama a função toggleMenu */}
                 <div className="menu-toggle" onClick={toggleMenu}>
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-                <nav className={`menu ${setMenuAtivo ? 'active' : ''}`}>
+                {/* se menuAtivo for true, adiciona a classe 'active' para ele aparecer */}
+                <nav className={`menu ${menuAtivo ? 'active' : ''}`}> {/*  tirei o set*/}
                     <a href="#hero" onClick={toggleMenu}>Home</a>
-                    <a href="#cardapio" onClick={toggleMenu}>Cardapio</a>
-                    <a href="#sobre" onClick={toggleMenu}>sobre</a>
-                    <a href="#contato" onClick={toggleMenu}>contato</a>
+                    <a href="#cardapio" onClick={toggleMenu}>Cardápio</a>
+                    <a href="#sobre" onClick={toggleMenu}>Sobre</a>
+                    <a href="#contato" onClick={toggleMenu}>Contato</a>
                 </nav>
             </header>
+            {/* Overlay escuro que fecha o menu ao clicar fora */}
             <div className={`overlay-menu ${menuAtivo ? 'active': ''}`}
                 onClick={toggleMenu}
             >
