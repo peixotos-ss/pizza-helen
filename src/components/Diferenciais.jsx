@@ -1,42 +1,43 @@
-import tomateImg from '../assets/tomate.png'
-import fogoImg from '../assets/fogo.png'
-import queijoImg from '../assets/queijo.png'
-import relampagoImg from '../assets/relampago.png'
+import tomateImg from '../assets/tomate.png';
+import fogoImg from '../assets/fogo.png';
+import queijoImg from '../assets/queijo.png';
+import relampagoImg from '../assets/relampago.png';
 
-const listaDiferenciais =[
+const listaDiferenciais = [
     {
         id: 1,
         imagem: tomateImg,
-        alt : tomtae,
-        texto: "ingredientes frescos"
+        alt: "Tomate",
+        texto: "Ingredientes Frescos"
     },
-
     {
         id: 2,
         imagem: fogoImg,
-        alt : fire,
-        texto: "forno a lenha"
+        alt: "Fogo",
+        texto: "Forno a lenha"
     },
     {
         id: 3,
         imagem: queijoImg,
-        alt : queijo,
-        texto: "mozzarela artesanal"
+        alt: "Queijo",
+        texto: "Mozzarela Artesanal"
     },
     {
         id: 4,
         imagem: relampagoImg,
-        alt : relampago,
-        texto: "delivery relampago"
+        alt: "Relâmpago",
+        texto: "Delivery Rápido"
     }
 ];
+
 export default function Diferenciais(){
     return(
         <section className='diferenciais' id='diferenciais'>
-            <h2>Nossos diferenciais</h2>
+            <h2>Nossos Diferenciais</h2>
+
             <div className='cards'>
                 {listaDiferenciais.map((item)=>(
-                    <div className='card' key={item.id}>
+                    <div className="card" key={item.id}>
                         <img src={item.imagem} alt={item.alt} />
                         <p>{item.texto}</p>
                     </div>

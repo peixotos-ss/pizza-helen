@@ -1,37 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap'); 
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Jacques francois', Arial;
-
+    font-family: 'Jacques Francois', Arial;
 }
 html, body{
     max-width: 100%;
     overflow-x: hidden;
-
 }
 body{
     background: #000;
-    color: #fff
+    color: #fff;
 }
+
 .header{
     position: absolute;
     width: 100%;
     top: 0;
     left: 0;
-    background-color: #1c1c1c;
+    background-color: #1C1C1C;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 30px;
     z-index: 1000;
-}
+} 
+
 .logo{
     font-size: 32px;
     font-weight: 500;
 }
-
+/* Menu Icon(mobile) */
 .menu-toggle{
     display: flex;
     flex-direction: column;
@@ -42,8 +43,8 @@ body{
 .menu-toggle span{
     width: 32px;
     height: 3px;
-    background-color: #fff;
-    margin: 3px 0;
+    background-color: white;
+    margin: 4px 0;
     transition: 0.3s;
 }
 
@@ -51,24 +52,23 @@ body{
     position: fixed;
     top: 0;
     right: 0;
-    width: 20%;
+    width: 20%; /* mudei de 70% para 20% */
     height: 100vh;
-    background: #1c1c1c;
+    background: #1C1C1C; /* mudei a cor */
     display: flex;
     flex-direction: column;
     padding: 80px 40px;
     transform: translateX(100%);
     transition: transform 0.4s ease;
 }
-
 .menu a{
-    margin: 15px;
+    margin: 15px 0;
     text-decoration: none;
     color: white;
     font-size: 18px;
 }
 .menu.active{
-    transform: rotateX(0);
+    transform: translateX(0);
 }
 .overlay-menu{
     position: fixed;
@@ -76,24 +76,25 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.6);
     opacity: 0;
     visibility: hidden;
     transition: 0.3s;
     z-index: 900;
 }
 
-.overlay-menu.active{
+.overlay-menu.active{ /* Corrigi e tirei um menu*/
     opacity: 1;
     visibility: visible;
-
 }
+
+/* css do hero */
 .hero{
-height: 100vh;
-background: url(./assets/pizza-Fundo.png);
-position: relative;
-background-repeat: no-repeat;
-background-size: cover;
+    height: 100vh;
+    background: url(./assets/pizza-Fundo.png);
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .overlay{
@@ -105,20 +106,20 @@ background-size: cover;
     padding: 0 80px;
 }
 .hero-txt h2{
-    font-size: 90px;
-    font-size: 300;
+    font-size: 56px; /* 90px */
+    font-weight: 300;
     line-height: 1.2;
     margin-top: 160px;
 }
 .hero-txt{
-    max-width: 800px;
+    max-width: 500px; /* 800px */
     text-align: right;
 }
 
 .hero-txt button{
     padding: 12px 28px;
     border: none;
-    background: #831515;
+    background: #ff3c00;
     color: white;
     border-radius: 6px;
     font-size: 16px;
@@ -126,5 +127,37 @@ background-size: cover;
     transition: 0.3s;
 }
 .hero-txt button:hover{
-    background: #f32b2b;
+    background: #87331a;
+}
+
+.diferenciais h2{
+  background: #0f5132;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.cards{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+
+}
+
+.card {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: #0f5132;
+   background: #0f5132;
+  border-radius: 12px;
+}
+
+.card img {
+    
+  width: 200px;
+  height: auto;
 }
