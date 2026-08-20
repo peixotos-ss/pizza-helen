@@ -130,12 +130,16 @@ body{
     background: #87331a;
 }
 
-.diferenciais h2{
+.diferenciais{
   background: #0f5132;
   padding: 50px 20px;
   text-align: center;
 }
+.diferenciais h2{
+    margin-top: 50px;
+    font-size: 32px;
 
+}
 .cards{
   display: flex;
   justify-content: center;
@@ -145,19 +149,31 @@ body{
 }
 
 .card {
-  width: 200px;
+  width: 230px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
+  padding: 30px 30px;
+  margin: 0 20px;
   background-color: #0f5132;
-   background: #0f5132;
+   background: #0c6d40;
   border-radius: 12px;
+   transition: 0.3s  ;
+}
+.card :hover{
+transform: translateY(-8px);
+ transition: 0.3s  ;
 }
 
 .card img {
     
   width: 200px;
-  height: auto;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+.card p{
+    font-size: 16px;
+    line-height: 1.3;
 }
