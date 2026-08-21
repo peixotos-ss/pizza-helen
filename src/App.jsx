@@ -1,15 +1,19 @@
+import Diferenciais from "./components/Diferenciais";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Diferenciais from "./components/Diferenciais";
+import Cardapio from "./components/Cardapio";
+import Sobre from "./components/sobre";
 
-function App(){
-  return(
+function App() {
+  return (
     <>
-      <Header />
+      <Header /> 
       <Hero />
       <Diferenciais />
+      <Cardapio />
+      <Sobre/>
     </>
   )
 }
 
-export default App; // apaguei os ()
+export default App;
